@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process.AI</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <!-- Place this inside your .chat-container -->
+        <div class="dark-mode-toggle" id="toggle-dark-mode">
+            <span class="icon" id="dark-mode-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2a10 10 0 100 20 10 10 0 000-20zm0 1a9 9 0 100 18 9 9 0 000-18zm.808 1.161a1 1 0 01.192 1.372l-.085.094L6.975 10H11a1 1 0 110 2H5.14l3.88 3.88a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.32.083l-.094-.083-6-6a1 1 0 010-1.414l6-6a1 1 0 011.372-.084l.094.084a1 1 0 01.084 1.371l-.085.094L5.14 8H11a1 1 0 110 2H6.975l5.16 5.16a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.32.083l-.094-.083-7-7a1 1 0 010-1.414l7-7z" />
+                </svg>
+            </span>
+        </div>
+
+        <div class="chat-history" id="chat-history">
+            <!-- Chat messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
